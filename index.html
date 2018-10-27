@@ -16,7 +16,7 @@
             console.log(item.value);
             if (item.children && item.children.length) {
                 item.children.forEach(item => {
-                    showItem(item);
+                    treeDepth(item);
                 });
             }
         }
