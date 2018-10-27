@@ -7,11 +7,26 @@
     <title>Хакатон — Алгоритмы</title>
 </head>
 <body>
-    <h1>Alg 1 = bubbleSort(arr);</h1>
-    <h1>Alg 2 = choiceSort(arr);</h1>
-    <h1>Alg 3 = insertSort(arr);</h1>
-
     <script>
+        function treeWidth(tree) {
+            const queue = [];
+
+            function handleLevel(item) {
+                console.log(item.value);
+                if (item.children && item.children.length) {
+                    item.children.forEach(item => {
+                        queue.push(item);
+                    });
+                }
+
+                if (queue.length) {
+                   handleLevel(queue.shift());
+                }
+            }
+
+            handleLevel(tree);
+        }
+
         function treeDepth(item) {
             console.log(item.value);
             if (item.children && item.children.length) {
@@ -72,6 +87,43 @@
 
             return arr;
         }
+
+        // const tree = {
+        //     value: 1,
+        //     children: [
+        //         {
+        //             value: 2,
+        //             children: [
+        //                 {
+        //                     value: 5,
+        //                     children: []
+        //                 },
+        //                 {
+        //                     value: 6,
+        //                     children: []
+        //                 }
+        //             ]
+        //         },
+        //         {
+        //             value: 3,
+        //             children: []
+        //         },
+        //         {
+        //             value: 4,
+        //             children: [
+        //                 {
+        //                     value: 7,
+        //                     children: []
+        //                 },
+        //                 {
+        //                     value: 8,
+        //                     children: []
+        //                 }
+        //             ]
+        //         }
+        //     ]
+        // }
+        // treeWidth(tree);
     </script>
 </body>
 </html>
