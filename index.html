@@ -5,11 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Хакатон — Алгоритмы</title>
+    <script src="index.js"></script>
 </head>
 <body>
     <h1>Alg 1 = bubbleSort(arr);</h1>
+    <h1>Alg 2 = choiceSort(arr);</h1>
+    <h1>Alg 3 = insertSort(arr);</h1>
 
     <script>
+        function insertSort(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                let j = arr.length - 1;
+                let num = arr[j];
+
+                while (num < arr[j - 1]) {
+                    arr[j] = arr[j - 1];
+                    j--;
+                }
+
+                arr[j] = num;
+            }
+
+            return arr;
+        }
+
         function choiceSort(arr) {
             for (let i = arr.length - 1; i >= 0; i--) {
                 let max = i;
