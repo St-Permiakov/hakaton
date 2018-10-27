@@ -12,6 +12,15 @@
     <h1>Alg 3 = insertSort(arr);</h1>
 
     <script>
+        function treeDepth(item) {
+            console.log(item.value);
+            if (item.children && item.children.length) {
+                item.children.forEach(item => {
+                    showItem(item);
+                });
+            }
+        }
+
         function insertSort(arr) {
             for (let i = arr.length - 2; i >= 0; i--) {
                 let j = i;
