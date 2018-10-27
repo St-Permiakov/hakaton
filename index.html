@@ -13,9 +13,9 @@
 
     <script>
         function insertSort(arr) {
-            for (let i = 0; i < arr.length; i++) {
-                let num = arr[i];
+            for (let i = arr.length - 2; i >= 0; i--) {
                 let j = i;
+                let num = arr[j];
 
                 while (num > arr[j + 1] && j < arr.length) {
                     arr[j] = arr[j + 1];
