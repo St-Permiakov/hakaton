@@ -7,20 +7,20 @@
     <title>Хакатон — Алгоритмы</title>
 </head>
 <body>
+    <h1>Alg 1 = bubbleSort(arr);</h1>
 
     <script>
-        function BubbleSort (arr) {
+        function bubbleSort (arr) {
             if (!arr || arr.length === 0) return 'Нет данных';
 
-            for (let i = 0; i < arr.length; i++) {
-                const num1 = arr[i];
+            for (let i = arr.length; i > 0; i--) {
+                let tmp = 0;
 
-                for (let j = i + 1; j < arr.length; j++) {
-                    const num2 = arr[j];
-
-                    if (num1 > num2) {
-                        arr[i] = num2;
-                        arr[j] = num1;
+                for (let j = arr.length - i; j > 0; j--) {
+                    if (arr[j] < arr[j - 1]) {
+                        tmp = arr[j];
+                        arr[j] = arr[j - 1];
+                        arr[j - 1] = tmp;
                     }
                 }
             }
