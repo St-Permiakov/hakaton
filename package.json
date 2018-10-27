@@ -1,0 +1,19 @@
+{
+  "name": "hakaton",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/St-Permiakov/hakaton.git"
+  },
+  "author": "Stanislav Permiakov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/St-Permiakov/hakaton/issues"
+  },
+  "homepage": "https://github.com/St-Permiakov/hakaton#readme"
+}
