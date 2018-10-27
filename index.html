@@ -12,14 +12,16 @@
     <script>
         function choiceSort(arr) {
             for (let i = arr.length - 1; i >= 0; i--) {
-                let max;
+                let max = i;
+                let tmp;
 
                 for (let j = i; j >= 0; j--) {
-                    max = arr[j] > max || !max ? arr[j] : max;
+                    max = arr[j] > arr[max] ? j : max;
                 }
 
-                arr[arr.indexOf(max)] = arr[i];
-                arr[i] = max;
+                tmp = arr[i];
+                arr[i] = arr[max];
+                arr[max] = tmp;
             }
 
             return arr;
